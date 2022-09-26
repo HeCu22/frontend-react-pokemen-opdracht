@@ -1,0 +1,138 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        Reusables
+        Other
+    4. Areas
+        Header
+        Cards
+        Button previous
+        Button next
+
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&family=Poppins:wght@200;300;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2, h4 {
+    font-family: 'PT Serif', 'Times New Roman', serif;
+    padding-top: 20px;
+
+}
+
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 30px;
+    padding: 30px 0;
+
+}
+
+
+body {
+    margin-top: 10px;
+    text-align: center;
+    background-color: #FFCB05; /* sunglow */
+}
+
+body p {
+    padding: 10px 0;
+    margin: 10px;
+}
+
+
+span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+header img {
+    padding: 0 20px;
+    width: 300px;
+}
+
+li span {
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: initial;
+
+    padding: 5px 15px;
+
+}
+
+ul li {
+    list-style: none;
+    margin: 20px 0;
+    border-radius: 10px;
+
+}
+
+li {
+
+
+    background-color: #EDEDED; /* cultured */
+}
+
+/* ------------------------------- Reusables -------------------------------- */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------- Cards -------------------------------- */
+.card-deck {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #FFDB57 /* mustard */
+}
+
+.border-color {
+    color: #11296B; /* royal blue dark */
+}
+
+
+.card {
+    background-color: white;
+    width: 200px;
+    height: 600px;
+    color: black;
+    margin: 0 20px;
+    padding: 0 20px;
+}
