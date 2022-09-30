@@ -8,7 +8,7 @@ function Button({children, boolean, clickHandler}) {
         <section className="row">
             <button
                 disabled={boolean}
-                type="button"
+                type="submit"
                 onClick={clickHandler}
             >
                 {children}

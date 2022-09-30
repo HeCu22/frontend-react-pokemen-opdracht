@@ -56,7 +56,8 @@ h1 {
 body {
     margin-top: 10px;
     text-align: center;
-    background-color: #FFCB05; /* sunglow */
+    background-color: #F2BD00;
+
 }
 
 body p {
@@ -73,12 +74,12 @@ span {
 
 header img {
     padding: 0 20px;
-    width: 300px;
+    width: 350px;
 }
 
 li span {
-    text-transform: uppercase;
-    font-size: large;
+    /*text-transform: uppercase;*/
+    font-size: medium;
     font-weight: initial;
 
     padding: 5px 15px;
@@ -120,7 +121,8 @@ li {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    color: #FFDB57 /* mustard */
+    color: #F2BD00;
+
 }
 
 .border-color {
@@ -135,4 +137,5 @@ li {
     color: black;
     margin: 0 20px;
     padding: 0 20px;
+    box-shadow: 8px 8px 8px 22px #E0B000;
 }

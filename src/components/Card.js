@@ -12,16 +12,13 @@ function Card({cardpick}) {
             try {
                 const {data} = await axios.get(cardpick);
                 setPokemon((data));
-                console.log('data2', (data));
 
             } catch (e) {
                 console.error(e);
             }
         }
 
-
         fetchCard();
-
 
     }, [cardpick]);
 
@@ -40,9 +37,7 @@ function Card({cardpick}) {
 
                     <ul>
                         {pokemon.abilities.map((item) => {
-                            {
-                                console.log('Ik ben map gerenderd')
-                            }
+                            // {console.log('Ik ben map gerenderd')}
                             return <li key={item.ability.name}>
                                 <span>{item.ability.name}</span>
                             </li>

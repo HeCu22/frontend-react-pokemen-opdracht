@@ -1,4 +1,5 @@
 button {
+    width: 86px;
     border: 1px solid #BC4C2A;
     color:  #BC4C2A;
     background-color: transparent;
@@ -9,7 +10,7 @@ button {
 }
 
 button {
-    background-color: #00509D;  /* USAFA blue */
+    background-color: #12519A;  /*
     margin: 5px
 }
 
@@ -20,7 +21,7 @@ button:hover {
 }
 
 button:disabled {
-    background-color: #EDEDED;  /* cultured */
+    background-color: #9E9E9D;
     cursor: not-allowed;
-    color: #D08169;
+    color: #12519A;
 }
