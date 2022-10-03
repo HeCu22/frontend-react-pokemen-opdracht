@@ -5,7 +5,7 @@ function Button({children, boolean, clickHandler}) {
 
 
     return (
-        <section className="row">
+
             <button
                 disabled={boolean}
                 type="submit"
@@ -13,7 +13,7 @@ function Button({children, boolean, clickHandler}) {
             >
                 {children}
             </button>
-        </section>
+
     )
 
 }

@@ -39,6 +39,7 @@ function App() {
             }
             toggleLoading(false);
         }
+
         console.log('🍌 Ik ben voor de eerste keer gemount');
         fetchData();
     }, [endpoint]);
@@ -62,6 +63,7 @@ function App() {
             }
             toggleLoading(false);
         }
+
         console.log('♻️ Ik ben geupdate', formState);
         if (counter > 0) {
             fetchDataUpdate();
@@ -79,28 +81,28 @@ function App() {
     }
 
     function handleChange(evt) {
-        setFormState({ inputName: evt.target.value });
+        setFormState({inputName: evt.target.value});
     }
 
     return (
+        <div className="outer-container">
+            <section className="inner-container" key={pokemons.url}>
 
-        <section className="column" key={pokemons.url}>
-            {loading && <span>Loading...</span>}
-            {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
-            {!pokemons && !error &&
-                <span>geen pokemons </span>}
+                {loading && <span>Loading...</span>}
+                {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
+                {!pokemons && !error &&
+                    <span>geen pokemons </span>}
 
-            {counter < 5 && <CounterResult amount={counter}/>}
-            {counter >= 5 && <> unmounted......please refresh </>}
-            {(pokemons && counter < 5) &&
-                <>
-                    {console.log('Ik ben app gerenderd')}
+                {counter < 5 && <CounterResult amount={counter}/>}
+                {counter >= 5 && <> unmounted......please refresh </>}
+                {(pokemons && counter < 5) &&
+                    <>
+                        {console.log('Ik ben app gerenderd')}
 
-                    <header>
-                        <img alt="logo" src={logo}/>
-                    </header>
-                    <section className="border-color">
-                        <div className="column">
+                        <header>
+                            <img alt="logo" src={logo}/>
+                        </header>
+                        <main className="card-deck">
                             <form onSubmit={handleSubmit}>
                                 <legend>Starten vanaf naam:</legend>
                                 <label htmlFor="name-field">
@@ -113,7 +115,7 @@ function App() {
 
                             </form>
 
-                            <div className="row">
+                            <div className="button-row">
                                 <Button
                                     boolean={!prevPokemons}
                                     clickHandler={() => setEndpoint(prevPokemons)}
@@ -126,20 +128,20 @@ function App() {
                                     Volgende
                                 </Button>
                             </div>
-                        </div>
 
-                        {/*{console.log(`Naam:`, inputValue, endpoint, nextPokemons)}*/}
-                        <main className="card-deck">
-                            {pokemons && pokemons.map((item) => {
-                                return <div key={item.url}>
-                                    <Card cardpick={item.url}/>
-                                </div>
-                            })}
-                        < /main>
-                    </section>
-                </>
-            }
-        </section>
+
+                            {/*{console.log(`Naam:`, inputValue, endpoint, nextPokemons)}*/}
+                            <>
+                                {pokemons && pokemons.map((item) => {
+                                    return(<Card key={item.name} cardpick={item.url}/>)
+                                })}
+                            < />S
+                        </main>
+
+                    </>
+                }
+            </section>
+        </div>
     );
 }
 

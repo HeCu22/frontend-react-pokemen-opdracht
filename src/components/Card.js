@@ -4,6 +4,7 @@ import './Card.css';
 
 function Card({cardpick}) {
     const [pokemon, setPokemon] = useState(null);
+    console.log('Card Ik ben aangeroepen');
 
     useEffect(() => {
         console.log('🍌 🍌 Ik ben voor de eerste keer gemount');
@@ -23,17 +24,15 @@ function Card({cardpick}) {
     }, [cardpick]);
 
     return (
-        <div className="card">
-
+        <article className="card">
             {pokemon &&
-
-                <article className="Card">
+                <>
                     <h1> {pokemon.name} </h1>
                     <p><img src={pokemon.sprites.front_default} alt="afbeelding"/>
                     </p>
-                    <p><span>Moves: </span> {pokemon.moves.length}</p>
-                    <p><span>Weight: </span> {pokemon.weight}</p>
-                    <h2>Abilities:</h2>
+                    <p><strong>Moves: </strong> {pokemon.moves.length}</p>
+                    <p><strong>Weight: </strong> {pokemon.weight}</p>
+                    <p><strong>Abilities:</strong></p>
 
                     <ul>
                         {pokemon.abilities.map((item) => {
@@ -45,9 +44,9 @@ function Card({cardpick}) {
 
                     </ul>
 
-                </article>
+                </>
             }
-        < /div>
+        </article>
     )
         ;
 }
